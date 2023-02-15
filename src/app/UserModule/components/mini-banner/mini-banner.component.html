@@ -1,0 +1,21 @@
+<section class="mini_banner">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="mini_banner_breadcrumb">
+                    <h2 class="breadcrumb_title">{{ page_name }}</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ breadcrumb_page }}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mini_banner_background">
+        <img class="img-fluid" [src]="mini_banner" alt="banner">
+    </div>
+</section>

@@ -1,1 +1,167 @@
+@font-face {
+    font-family: 'themify_brushregular';
+    src: url('/assets/fonts/themify_brush_font-webfont.woff2') format('woff2'),
+        url('/assets/fonts/themify_brush_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticabold';
+    src: url('/assets/fonts/helvetica-bold-webfont.woff2') format('woff2'),
+        url('/assets/fonts/helvetica-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('/assets/fonts/helvetica-webfont.woff2') format('woff2'),
+        url('/assets/fonts/helvetica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Miniver&display=swap');
 /* You can add global styles to this file, and also import other style files */
+
+.btn_primary {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    padding: 16px 48px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    border-radius: 6px;
+    background: #195A00;
+}
+
+.btn_primary_outline {
+    border: 1px solid #195A00;
+    font-family: 'Inter', sans-serif;
+    padding: 16px 48px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #195A00;
+    border-radius: 6px;
+    background: white;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    .navbar-brand {
+        width: 109px;
+        max-width: 110px;
+        margin-right: 94px;
+    }
+
+    .nav_icons_layout {
+        ul {
+            grid-gap: 16px;
+        }
+
+        li {
+            a {
+                width: 24px;
+                display: block;
+            }
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                font-family: 'helveticaregular';
+            }
+
+            .nav-link.active {
+                font-family: 'helveticabold';
+            }
+        }
+    }
+}
+
+
+
+
+.products_slider {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        background: rgba(25, 90, 0, 0.3);
+        border-radius: 4px;
+        z-index: 10;
+        color: var(--swiper-navigation-color, var(--swiper-theme-color));
+        background: #195A00;
+        top: 53%;
+        transform: translateY(50%);
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: swiper-icons;
+        font-size: 20px;
+        text-transform: none !important;
+        letter-spacing: 0;
+        font-variant: initial;
+        line-height: 1;
+        color: white;
+    }
+
+    .swiper-button-next {
+        right: -70px;
+        z-index: 99999;
+        position: absolute;
+    }
+    .swiper-button-prev {
+        left: -70px;
+        z-index: 99999;
+        position: absolute;
+    }
+
+}
+
+.app-home-food-slider {
+    position: relative;
+}
+
+
+.home_slider{
+    position: initial !important;
+}
+.products_slider {
+    position: relative !important;
+}
+
+.black_theme {
+    app-header {
+        header.home {
+            background: #0D0D0D;
+            position: static;
+            #navbarSupportedContent {
+                ul {
+                    li {
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .navbar-brand {
+                filter: brightness(0) saturate(100%) invert(98%) sepia(9%) saturate(16%) hue-rotate(241deg) brightness(116%) contrast(100%);
+            }
+        }
+    }
+}

@@ -3,14 +3,37 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthComponent } from './UserModule/auth/auth.component';
+import { HomeComponent } from './UserModule/home/home.component';
+import { HeaderComponent } from './UserModule/components/header/header.component';
+import { FooterComponent } from './UserModule/components/footer/footer.component';
+import { HomeHeroComponent } from './UserModule/components/home-hero/home-hero.component';
+import { FoodCategoryComponent } from './UserModule/components/food-category/food-category.component';
+import { HomeFoodSliderComponent } from './UserModule/components/home-food-slider/home-food-slider.component';
+
+import { SwiperModule } from 'swiper/angular';
+import { ShopListComponent } from './UserModule/pages/shop-list/shop-list.component';
+import { HeaderDarkComponent } from './UserModule/components/header-dark/header-dark.component';
+import { MiniBannerComponent } from './UserModule/components/mini-banner/mini-banner.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeHeroComponent,
+    FoodCategoryComponent,
+    HomeFoodSliderComponent,
+    ShopListComponent,
+    HeaderDarkComponent,
+    MiniBannerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
