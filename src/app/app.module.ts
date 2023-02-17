@@ -15,6 +15,11 @@ import { SwiperModule } from 'swiper/angular';
 import { ShopListComponent } from './UserModule/pages/shop-list/shop-list.component';
 import { HeaderDarkComponent } from './UserModule/components/header-dark/header-dark.component';
 import { MiniBannerComponent } from './UserModule/components/mini-banner/mini-banner.component';
+import { ShopDetailsComponent } from './UserModule/pages/shop-details/shop-details.component';
+import { AddToCartComponent } from './UserModule/components/add-to-cart/add-to-cart.component';
+import 'hammerjs';
+import 'mousetrap';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 @NgModule({
   declarations: [
@@ -28,14 +33,18 @@ import { MiniBannerComponent } from './UserModule/components/mini-banner/mini-ba
     HomeFoodSliderComponent,
     ShopListComponent,
     HeaderDarkComponent,
-    MiniBannerComponent
+    MiniBannerComponent,
+    ShopDetailsComponent,
+    AddToCartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    GalleryModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

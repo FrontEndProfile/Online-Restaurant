@@ -1,10 +1,6 @@
 import { Component , OnInit } from '@angular/core';
 
-import SwiperCore, { SwiperOptions } from 'swiper';
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
-// install Swiper modules
+import SwiperCore, { SwiperOptions , Navigation, Pagination, Scrollbar, A11y  } from 'swiper';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 
@@ -26,9 +22,5 @@ export class HomeFoodSliderComponent implements OnInit  {
     navigation: true,
     pagination: false,
 
-    // navigation: {
-    //   nextEl: ".swiper-button-next",
-    //   prevEl: ".swiper-button-prev",
-    // },
   };
 }
