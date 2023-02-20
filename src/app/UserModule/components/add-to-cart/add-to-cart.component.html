@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<div class="container product_layout_main">
+    <div class="row product_layout_add_media">
         <div class="col-md-6">
             <ks-carousel [id]="100" [images]="images"></ks-carousel>
         </div>
@@ -7,12 +7,114 @@
             <div class="product_layout">
 
                 <div class="product_layout_arrows_row d-flex align-items-center justify-content-between">
-                    <div class="product_stock_label btn shadow-none">In stock</div>
+                    <div class="product_stock_label shadow-none btn">In stock</div>
                     <div class="product_img_arrow d-flex align-items-center ">
-
                     </div>
+                </div>
+
+                <div>
+                    <h1 class="product_tittle">
+                        Yummy Chicken Chup
+                    </h1>
+                    <p class="product_content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum
+                        non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum.
+                        Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
+                    </p>
+                    <div class="divider_line"></div>
+                    <div class="product_tag_prize">
+                        {{54.00 | currency}}
+                    </div>
+                    <div class="product_tag_gredients">
+                        Dictum/cursus/Risus
+                    </div>
+
+
+                    <div class="d-flex align-items-center add_to_cart_row">
+                        <div class="product_add_amount">
+                            <div class="product_minus" (click)="minus()"><i class="fa-solid fa-minus"></i></div>
+                            <input class="product_amonut_view" disabled [value]="quantity"> 
+                            <div class="product_add" (click)="plus()"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+    
+                        <div class="product_add_to_cart_btn">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Add to cart</span>
+                        </div>
+                    </div>
+
+                    <div class="divider_line"></div>
+
+                    <div class="product_links">
+                        <a routerLink="#" class="product_link_btn">
+                            <span class="icon"><i class="fa-regular fa-heart"></i></span>
+                            <span>Add to Wishlist</span>
+                        </a>
+                        <a routerLink="#" class="product_link_btn">
+                            <span class="icon"><i class="fa-solid fa-code-compare"></i></span>
+                            <span>Compare</span>
+                        </a>
+                    </div>
+                    <div class="product_links pt-0">
+                        <a routerLink="#" class="product_link_btn">
+                            <span class="icon">Category:</span>
+                            <span>Pizza</span>
+                        </a>
+                    </div>
+                    <div class="product_links pt-0">
+                        <a routerLink="#" class="product_link_btn">
+                            <span class="icon">Tag:</span>
+                            <span>Our Shop</span>
+                        </a>
+                    </div>
+
+                    <div class="product_links pt-0">
+                        <div class="product_link_share">
+                            <span class="icon">Share :</span>
+                            <span><ul class="m-0 p-0 list-unstyled">
+                                <li><a class="text-decoration-none" href="#"><img class="img-fluid" src="/assets/images/youtube-with-circle.png" alt="icon"></a></li>
+                                <li><a class="text-decoration-none" href="#"><img class="img-fluid" src="/assets/images/facebook-circle.png" alt="icon"></a></li>
+                                <li><a class="text-decoration-none" href="#"><img class="img-fluid" src="/assets/images/twitter-with-circle.png" alt="icon"></a></li>
+                                <li><a class="text-decoration-none" href="#"><img class="img-fluid" src="/assets/images/vk-with-circle.png" alt="icon"></a></li>
+                                <li><a class="text-decoration-none" href="#"><img class="img-fluid" src="/assets/images/instagram-alt.png" alt="icon"></a></li>
+                            </ul></span>
+                        </div>
+                    </div>
+                    <div class="divider_line"></div>
+
+                    
+
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+        <!-- SKIP ---  -->
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Description</button>
+              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Reviews</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                <p>
+                    Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget sem auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi. In nulla quam, lacinia eu aliquam ac, aliquam in nisl.
+                </p>
+                <p>
+                    Suspendisse cursus sodales placerat. Morbi eu lacinia ex. Curabitur blandit justo urna, id porttitor est dignissim nec. Pellentesque scelerisque hendrerit posuere. Sed at dolor quis nisi rutrum accumsan et sagittis massa. Aliquam aliquam accumsan lectus quis auctor. Curabitur rutrum massa at volutpat placerat. Duis sagittis vehicula fermentum. Integer eu vulputate justo. Aenean pretium odio vel tempor sodales. Suspendisse eu fringilla leo, non aliquet sem.
+                </p>
+                <h3>Key Benefits</h3>
+
+                <ul class="m-0 p-0 px-4">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet adipiscing elit.</li>
+                    <li>Lorem dolor sit amet, consectetur adipiscing elit.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+          </div>
+          
     </div>
 </div>

@@ -5,10 +5,10 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-add-to-cart',
   templateUrl: './add-to-cart.component.html',
-  template: `
-  <gallery [items]="images"></gallery>
-`
-  ,
+  //   template: `
+  //   <gallery [items]="images"></gallery>
+  // `
+  //   ,
   styleUrls: [
     "./add-to-cart.component.scss",
   ],
@@ -30,16 +30,30 @@ export class AddToCartComponent implements OnInit {
     })
 
   ];
+  quantity: number = 1;
+  i = 1
+  plus() {
+    if (this.i != 9) {
+      this.i++
+      this.quantity = this.i;
+    }
+  }
+  minus() {
+    if (this.i != 1) {
+      this.i--
+      this.quantity = this.i;
+    }
+  }
   ngOnInit() {
 
 
 
-    $( document ).ready(function() {
+    $(document).ready(function () {
 
       $("#carousel-container > .current-figure > .nav-left").appendTo(".product_layout .product_layout_arrows_row .product_img_arrow");
 
       $("#carousel-container > .current-figure > .nav-right").appendTo(".product_layout .product_layout_arrows_row .product_img_arrow");
-});
+    });
 
   }
 }

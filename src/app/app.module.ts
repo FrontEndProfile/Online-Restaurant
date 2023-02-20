@@ -20,6 +20,7 @@ import { AddToCartComponent } from './UserModule/components/add-to-cart/add-to-c
 import 'hammerjs';
 import 'mousetrap';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
+import { SimilarProductsComponent } from './UserModule/components/similar-products/similar-products.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
     HeaderDarkComponent,
     MiniBannerComponent,
     ShopDetailsComponent,
-    AddToCartComponent
+    AddToCartComponent,
+    SimilarProductsComponent
   ],
   imports: [
     BrowserModule,

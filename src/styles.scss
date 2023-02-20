@@ -283,3 +283,39 @@ header {
         }
     }
 }
+
+
+.similar_slider_arrows {
+    .swiper-button-prev ,.swiper-button-next {
+        position: relative !important;
+        width: 40px;
+        height: 40px;
+        background: white;
+        color: #FF9F0D;
+        transition: color 0.4s ease-out;
+    }
+    .swiper-button-prev {
+        margin-right: 30px;
+    }
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+        font-family: "FontAwesome";
+        content: "\f0a9" !important;
+        width: 100%;
+        left: -1px;
+        position: absolute;
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+        font-family: "FontAwesome";
+        content: "\f0a8" !important;
+        width: 100%;
+        left: -1px;
+        position: absolute;
+    }
+    .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+        opacity: 1 !important;
+        color: #FAF7F2;
+        background: #333333;
+        border-radius: 55%;
+        transition: color 0.4s ease-in;
+    }
+}
