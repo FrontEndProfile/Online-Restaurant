@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto my-5">
+            <h3 class="text-primary fs-2 fw-medium mb-5">Add Products</h3>
+            <form  [formGroup]="ProductsCreate" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Products Name</label>
+                  <input required type="text" class="form-control" placeholder="Add Tittle" id="name" aria-describedby="name" formControlName="ProductsName">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Products Image Url</label>
+                    <input required type="text" class="form-control" placeholder="Upload Images" aria-describedby="name" formControlName="ProductsImage">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Products Image Upload</label>
+                    <input required type="file" class="form-control" placeholder="Upload Images" aria-describedby="name" formControlName="ProductsImagePath"  (change)="onFileChange($event)" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Products Prize</label>
+                    <input required type="text" class="form-control" placeholder="Add Prize" aria-describedby="name" formControlName="ProductsPrize">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Products Description</label>
+                    <input required type="text" class="form-control" placeholder="Add Description" aria-describedby="name" formControlName="ProductsDescription">
+                </div>
+                   
+                <button type="submit" class="btn btn-primary">Submit</button>
+               
+              </form>
+
+    
+              <form>
+                <!-- <div class="mb-3">
+                    <label for="name" class="form-label">Products Image Upload</label>
+                    <input required type="file" class="form-control" placeholder="Upload Images" aria-describedby="name"  (change)="onFileChange($event)" >
+                </div> -->
+              </form>
+    
+              <!-- <ul *ngFor="let data of dashBoardData |async">
+                <li>{{data.ProfileName}}</li>
+                <button (click)="updateData(data.id)">update</button>
+              </ul> -->
+              
+        </div>
+    </div>
+</div>

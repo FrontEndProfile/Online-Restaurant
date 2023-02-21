@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row mb-5" *ngFor="let product of productListing | async">
+        <div class="col">
+            <div class="product_live_listing shadow-lg">
+                <div class="product_img">
+                    <img class="img-fluid" [src]="product.ProductsImagePath" alt="">
+                </div>
+                <div class="product_content">
+                    <h2 class="product_tittle">{{ product.ProductsName }}</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ipsa.</p>
+                </div>
+                <div class="product_controls">
+                    <!-- <button class="btn btn-outline-danger product_controls_remove" (click)="deleteProduct(item.id)">delete</button> -->
+                    <a href="#" class="btn btn-outline-success product_controls_remove ms-3">view</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

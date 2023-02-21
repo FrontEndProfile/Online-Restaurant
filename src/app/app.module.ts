@@ -21,6 +21,19 @@ import 'hammerjs';
 import 'mousetrap';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { SimilarProductsComponent } from './UserModule/components/similar-products/similar-products.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { AddProductsComponent } from './AdminModule/CRUD-Product/add-products/add-products.component';
+import { RemoveProductsComponent } from './AdminModule/CRUD-Product/remove-products/remove-products.component';
+import { UpdateProductsComponent } from './AdminModule/CRUD-Product/update-products/update-products.component';
+import { LoginComponent } from './AdminModule/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { DashBoardComponent } from './AdminModule/dash-board/dash-board.component';
+
 
 @NgModule({
   declarations: [
@@ -37,13 +50,25 @@ import { SimilarProductsComponent } from './UserModule/components/similar-produc
     MiniBannerComponent,
     ShopDetailsComponent,
     AddToCartComponent,
-    SimilarProductsComponent
+    SimilarProductsComponent,
+    AddProductsComponent,
+    RemoveProductsComponent,
+    UpdateProductsComponent,
+    LoginComponent,
+    DashBoardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SwiperModule,
-    GalleryModule
+    GalleryModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    ReactiveFormsModule,
+    provideStorage(() => getStorage()),
+    AngularFireModule,
+    AngularFireStorageModule
+
   ],
   providers: [
   ],
